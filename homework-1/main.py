@@ -6,12 +6,12 @@ import csv
 def setup_connection():
     with psycopg2.connect("dbname='north' user='postgres' host='localhost' password='admin'") as north_conn:
 
-        # print(f"Autocommit: {north_conn.autocommit} and Isolation Level: {north_conn.isolation_level}")
+        print(f"Autocommit: {north_conn.autocommit} and Isolation Level: {north_conn.isolation_level}")
 
         # change the behavior of commit
         north_conn.autocommit = True
 
-        # print(f"Autocommit: {north_conn.autocommit} and Isolation Level: {north_conn.isolation_level}")
+        print(f"Autocommit: {north_conn.autocommit} and Isolation Level: {north_conn.isolation_level}")
         return north_conn
 
 
